@@ -2,6 +2,7 @@ import dbConnect from "../../../db/connect.js";
 import Product from "../../../db/models/Products";
 
 export default async function handler(request, response) {
+  await dbConnect();
   const { id } = request.query;
 
   const product = await Product.findById(id);
