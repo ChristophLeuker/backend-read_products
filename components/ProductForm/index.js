@@ -19,6 +19,7 @@ export default function ProductForm() {
     if (response.ok) {
       mutate();
     }
+    event.target.reset();
   }
 
   return (
