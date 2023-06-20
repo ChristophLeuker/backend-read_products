@@ -17,7 +17,7 @@ export default async function handler(request, response) {
       response.status(201).json({ status: "product createt" });
     } catch (error) {
       console.log(error);
-      response.status(500).json({ error: error.message });
+      response.status(400).json({ error: error.message });
     }
   }
 }
